@@ -11,7 +11,7 @@ public class Control: MonoBehaviour, EffectInterface {
 	private Turn activeTurn;
 	private Sound sound;
 	private GraphicalEffectFactory graphicalEffectFactory;
-//	private AI ai = new AI(); //for debug
+	private AI ai = new AI(); //for debug
 		
 	void Awake () {
 		sound = (Sound)FindObjectOfType(typeof(Sound));
@@ -136,8 +136,8 @@ public class Control: MonoBehaviour, EffectInterface {
 		startOfTurn = new GameState(cState);
 		
 //		//TEST:
-//		Debug.Log("Calling AI");
-//		ai.Calculate(); 
+		Debug.Log("Calling AI");
+		ai.Calculate(); 
 	}
 	
 	public void StartNewGame(){
